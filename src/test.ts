@@ -17,4 +17,16 @@ function showDetailsWithDefaultValueIfUserDidNotInsertAValue ( name: string = "s
     // age?: number make this variable optional and there is no need to write it in by the user.
     return `${name} ${age} ${salary}`
 }
-console.log(showDetailsWithDefaultValueIfUserDidNotInsertAValue( ));
+console.log(showDetailsWithDefaultValueIfUserDidNotInsertAValue( )); // output here gonna be sultan -undef  - undef
+
+const addNumbers = (...numbers : number[])  => {
+    let result = 0;
+  //  numbers.forEach(element => result += element );
+    for(let i = 0 ; i < numbers.length ; i++ ) result += numbers[i]
+    console.log("result is :" + result)
+}
+
+addNumbers(1,2,3,4,10, +true )
+
+const addTwoNumbers = (num1 : number , num2 : number) :number => num1 + num2;
+console.log("from arrow function the result is : " + addTwoNumbers(10,20) )
